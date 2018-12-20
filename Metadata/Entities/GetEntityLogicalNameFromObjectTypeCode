@@ -1,0 +1,47 @@
+/*Category
+Code Now
+Category*/
+/*Description
+
+Description*/
+/*Title
+New Script
+Title*/
+/*Type
+Code
+Type*/
+/*Using
+using System;
+using Microsoft.Xrm.Sdk;
+using Microsoft.Xrm.Sdk.Query;
+using Microsoft.Xrm.Sdk.Messages;
+using Microsoft.Xrm.Sdk.Metadata;
+using System.Xml;
+using System.Text;
+using System.IO;
+using System.Linq;
+Using*/
+/*Code
+public static void CodeNow(){
+    
+    var entityTypeCode = 10304;
+  RetrieveAllEntitiesRequest request = new RetrieveAllEntitiesRequest()
+  {
+      EntityFilters = EntityFilters.Entity,
+      RetrieveAsIfPublished = true
+  };
+
+  // Retrieve the MetaData.
+  RetrieveAllEntitiesResponse response = (RetrieveAllEntitiesResponse)Service.Execute(request);
+  
+  var entity = response.EntityMetadata.SingleOrDefault(e => e.ObjectTypeCode == entityTypeCode);
+  
+  if(entity == null)
+  {
+      LogMessage("No entity found with ObjectTypeCode = " + entityTypeCode);
+      return;
+  }
+  
+  LogMessage("Entity with Object Type Code " + entityTypeCode + " has logical name " + entity.LogicalName + " and display name " + entity.DisplayName.LocalizedLabels[0].Label);
+}
+Code*/
